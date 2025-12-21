@@ -11,11 +11,18 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900/70 via-dark-900/50 to-dark-900 z-10" />
         
-        {/* Imagen de fondo para móvil y fallback */}
+        {/* Imagen MÓVIL (vertical/portrait) - se oculta en desktop */}
+        <img
+          src="/images/hero-mobile.jpg"
+          alt="Hero background mobile"
+          className="md:hidden absolute inset-0 w-full h-full object-cover object-top"
+        />
+        
+        {/* Imagen DESKTOP (horizontal/landscape) - se oculta en móvil */}
         <img
           src="/images/hero-poster.jpg"
-          alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+          alt="Hero background desktop"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
         />
         
         {/* Video de fondo (solo desktop, se superpone a la imagen) */}

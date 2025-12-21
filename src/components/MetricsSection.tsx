@@ -135,7 +135,7 @@ export default function MetricsSection() {
         >
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
             <TrendingUp className="w-6 h-6 text-accent-400" />
-            Entrenamiento 2024
+            Entrenamiento 2025
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

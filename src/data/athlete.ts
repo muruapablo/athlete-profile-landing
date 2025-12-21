@@ -18,7 +18,7 @@ export const athleteData = {
     category: "Elite Amateur",
     yearsOfExperience: 5,
     club: "AGMT2",
-    currentSponsors: ["Oslo", "Ziroox"],
+    currentSponsors: ["Oslo", "Ziroox, 24hs SECURITY"],
   },
   
   // Valores del atleta
