@@ -180,19 +180,21 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Play video button (opcional) */}
-      <motion.button
+      <motion.a
+        href="https://www.instagram.com/reel/DQkoBw0jfC-/?igsh=NXptdXRzY2l6b2lq"
+        target="_blank"
+        rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, type: "spring" }}
         className="absolute bottom-32 right-8 md:right-16 z-20 group"
-        onClick={() => {/* Abrir modal de video */}}
       >
         <div className="relative w-16 h-16 rounded-full glass flex items-center justify-center group-hover:scale-110 transition-transform">
           <Play className="w-6 h-6 ml-1 text-white" />
           <div className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping" />
         </div>
         <span className="block mt-2 text-xs text-gray-400 text-center">Ver reel</span>
-      </motion.button>
+      </motion.a>
     </section>
   )
 }
