@@ -149,7 +149,7 @@ export default function SocialFeed() {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6">
                   <div className="text-center">
-                    <p className="font-bold">{post.likes.toLocaleString()}</p>
+                    <p className="font-bold">{post.likes}</p>
                     <p className="text-xs text-gray-300">❤️ likes</p>
                   </div>
                   <div className="text-center">

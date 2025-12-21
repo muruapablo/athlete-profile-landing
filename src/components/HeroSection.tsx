@@ -10,14 +10,21 @@ export default function HeroSection() {
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900/70 via-dark-900/50 to-dark-900 z-10" />
-        {/* Video de fondo */}
+        
+        {/* Imagen de fondo para móvil y fallback */}
+        <img
+          src="/images/hero-poster.jpg"
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+        />
+        
+        {/* Video de fondo (solo desktop, se superpone a la imagen) */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
-          poster="/images/hero-poster.jpg"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
         >
           <source src="/videos/hero-reel.mp4" type="video/mp4" />
         </video>
