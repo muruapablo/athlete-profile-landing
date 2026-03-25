@@ -77,7 +77,7 @@ export default function MetricsSection() {
           </p>
         </motion.div>
 
-        {/* Personal Bests */}
+        {/* Personal Bests - DESACTIVADO
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -91,7 +91,6 @@ export default function MetricsSection() {
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Swimming */}
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover group">
               <div className="text-4xl mb-4">🏊‍♂️</div>
               <h4 className="text-lg font-semibold text-gray-300 mb-2">Natación</h4>
@@ -99,7 +98,6 @@ export default function MetricsSection() {
               <p className="text-sm text-gray-400">{personalBests.swimming.distance} • {personalBests.swimming.event}</p>
             </motion.div>
 
-            {/* Cycling */}
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover group">
               <div className="text-4xl mb-4">🚴‍♂️</div>
               <h4 className="text-lg font-semibold text-gray-300 mb-2">Ciclismo</h4>
@@ -107,7 +105,6 @@ export default function MetricsSection() {
               <p className="text-sm text-gray-400">{personalBests.cycling.distance} • {personalBests.cycling.event}</p>
             </motion.div>
 
-            {/* Running */}
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover group">
               <div className="text-4xl mb-4">🏃‍♂️</div>
               <h4 className="text-lg font-semibold text-gray-300 mb-2">Running</h4>
@@ -115,7 +112,6 @@ export default function MetricsSection() {
               <p className="text-sm text-gray-400">{personalBests.running.distance} • {personalBests.running.event}</p>
             </motion.div>
 
-            {/* Triathlon */}
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover group animated-border">
               <div className="text-4xl mb-4">🏆</div>
               <h4 className="text-lg font-semibold text-gray-300 mb-2">Triatlón</h4>
@@ -124,8 +120,9 @@ export default function MetricsSection() {
             </motion.div>
           </div>
         </motion.div>
+        */}
 
-        {/* Training Stats - Live Dashboard */}
+        {/* Training Stats - Live Dashboard - DESACTIVADO
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -135,7 +132,7 @@ export default function MetricsSection() {
         >
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
             <TrendingUp className="w-6 h-6 text-accent-400" />
-            Entrenamiento 2025
+            Entrenamiento 2026
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -182,6 +179,7 @@ export default function MetricsSection() {
             </motion.div>
           </div>
         </motion.div>
+        */}
 
         {/* Achievements */}
         <motion.div
@@ -233,7 +231,7 @@ export default function MetricsSection() {
             Alcance Digital
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Instagram */}
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover">
               <div className="flex items-center gap-3 mb-4">
@@ -332,7 +330,7 @@ export default function MetricsSection() {
               </a>
             </motion.div>
 
-            {/* YouTube */}
+            {/* YouTube - COMENTADO (la atleta no usa YouTube)
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-red-600">
@@ -369,6 +367,7 @@ export default function MetricsSection() {
                 @{socialMetrics.youtube.handle}
               </a>
             </motion.div>
+            */}
 
             {/* Strava */}
             <motion.div variants={itemVariants} className="glass rounded-2xl p-6 card-hover">

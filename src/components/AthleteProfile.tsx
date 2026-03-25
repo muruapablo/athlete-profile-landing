@@ -52,25 +52,27 @@ export default function AthleteProfile() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Profile Info Cards */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left Column - Profile Info */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-6"
+            className="flex flex-col gap-6"
           >
-            {/* Main Profile Card */}
-            <motion.div
-              variants={itemVariants}
-              className="glass rounded-2xl p-8 card-hover"
-            >
+            <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Award className="w-6 h-6 text-primary-400" />
                 Información del Atleta
               </h3>
-              
+            </motion.div>
+
+            {/* Main Profile Card */}
+            <motion.div
+              variants={itemVariants}
+              className="glass rounded-2xl p-6 card-hover"
+            >
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div>
@@ -127,13 +129,13 @@ export default function AthleteProfile() {
             )}
           </motion.div>
 
-          {/* Values */}
+          {/* Right Column - Values & Bio */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-6"
+            className="flex flex-col gap-6"
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
@@ -149,7 +151,7 @@ export default function AthleteProfile() {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="group glass rounded-xl p-6 card-hover"
+                    className="group glass rounded-xl p-6 card-hover h-full"
                   >
                     <div className="flex items-start gap-4">
                       <div className="p-3 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-500/20 group-hover:from-primary-500/30 group-hover:to-accent-500/30 transition-colors">
@@ -169,12 +171,12 @@ export default function AthleteProfile() {
               })}
             </div>
 
-            {/* Bio */}
+            {/* Bio Section */}
             <motion.div
               variants={itemVariants}
               className="glass rounded-2xl p-6"
             >
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-base">
                 {athleteData.bio}
               </p>
             </motion.div>

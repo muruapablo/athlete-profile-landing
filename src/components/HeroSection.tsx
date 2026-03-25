@@ -108,13 +108,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-2xl md:text-4xl font-light text-white mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-3xl font-light text-white mb-8 max-w-3xl mx-auto"
           >
             &ldquo;{athleteData.claim}&rdquo;
           </motion.p>
 
-          {/* Sport icons */}
-          <motion.div
+          {/* Sport icons - COMENTADO */}
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -132,7 +132,7 @@ export default function HeroSection() {
               <span className="text-4xl mb-2">🏃‍♂️</span>
               <span className="text-xs text-gray-400">Running</span>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* CTAs */}
           <motion.div

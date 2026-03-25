@@ -4,7 +4,7 @@ export const athleteData = {
   name: "Leticia Alberto",
   title: "Triatleta de Alto Rendimiento",
   claim: "Disciplina, constancia y resultados medibles",
-  bio: "Atleta dedicado al triatlón desde hace más de 5 años. Comprometido con la excelencia deportiva y la superación constante. Busco alianzas con marcas que compartan mis valores de disciplina, resiliencia y alto rendimiento.",
+  bio: "Atleta dedicada al triatlón desde hace más de 5 años. Comprometida con la excelencia deportiva y la superación constante. Busco alianzas con marcas que compartan mis valores de disciplina y alto rendimiento.",
   location: "Córdoba, Argentina",
   
   // Video hero (URL de YouTube embed o video local)
@@ -18,7 +18,7 @@ export const athleteData = {
     category: "Elite Amateur",
     yearsOfExperience: 5,
     club: "AGMT2",
-    currentSponsors: ["Oslo", "Ziroox, 24hs SECURITY"],
+    currentSponsors: ["Oslo", "Ziroox", "24hs SECURITY"],
   },
   
   // Valores del atleta
@@ -39,16 +39,16 @@ export const athleteData = {
   
   // Resultados destacados
   achievements: [
-    { position: 1, event: "Triatlón Sprint BA", year: 2024, category: "Grupo de edad" },
-    { position: 3, event: "Half Ironman MDP", year: 2024, category: "General" },
-    { position: 2, event: "Duatlón Nacional", year: 2023, category: "Elite" },
-    { position: 1, event: "10K Running Series", year: 2023, category: "Open" },
+    { position: 1, event: "Triatlón Cordoba 26", year: 2026, category: "General" },
+    { position: 1, event: "Triatlón Cross 25", year: 2025, category: "General" },
+    { position: 5, event: "Desafio Rio Pinto", year: 2025, category: "Damas A2" },
+    { position: 1, event: "Gran Fondo 7 Lagos", year: 2024, category: "Damas A" },
   ],
   
   // Métricas digitales
   socialMetrics: {
     instagram: {
-      followers: 12500,
+      followers: 13200,
       engagement: 4.2,
       avgReach: 25000,
       avgViews: 12000,
@@ -60,32 +60,37 @@ export const athleteData = {
       engagement: 6.8,
       avgViews: 45000,
       handle: "@atleta_tri",
-      url: "https://tiktok.com/@atleta_tri"
+      url: "https://tiktok.com/@letyalberto"
     },
-    youtube: {
-      subscribers: 2100,
-      avgViews: 3500,
-      handle: "AtletaTri",
-      url: "https://youtube.com/@AtletaTri"
-    },
+    // youtube: {
+    //   subscribers: 2100,
+    //   avgViews: 3500,
+    //   handle: "AtletaTri",
+    //   url: "https://youtube.com/@AtletaTri"
+    // },
     strava: {
       followers: 890,
       handle: "Lety🦋 Alberto",
-      url: "https://www.strava.com/athletes/95453743?oq=lety"
+      url: "https://www.strava.com/athletes/95453743?oq=let"
     }
   },
+  
+  // Behold Instagram Feed (Servicio de terceros - más fácil que API)
+  // Obtén tu Feed ID en https://behold.so después de crear tu feed
+  // Ejemplo: "ABC123DEF"
+  beholdFeedId: "", // Vacío = usa placeholders. Completa después de crear el feed en Behold
   
   // Calendario de competencias
   upcomingRaces: [
     {
-      name: "Ironman 70.3 Buenos Aires",
-      date: "2025-03-15",
-      location: "Buenos Aires, Argentina",
-      distance: "Half Ironman",
+      name: "Ironman 5i50 San Juan 2026",
+      date: "2026-10-30",
+      location: "San Juan, Argentina",
+      distance: "5i50 Ironman",
       status: "confirmed", // confirmed | target | preparation
       priority: "A", // A = objetivo principal, B = preparación, C = training
     },
-    {
+    /*{
       name: "Triatlón Sprint Mar del Plata",
       date: "2025-02-01",
       location: "Mar del Plata, Argentina",
@@ -100,14 +105,14 @@ export const athleteData = {
       distance: "Full Ironman",
       status: "target",
       priority: "A",
-    },
+    },*/
     {
-      name: "Duatlón Cross",
-      date: "2025-04-20",
-      location: "Córdoba, Argentina",
-      distance: "Duatlón",
+      name: "Rio Pinto 2026",
+      date: "2026-05-03",
+      location: "La Cumbre, Córdoba, Argentina",
+      distance: "85KM",
       status: "preparation",
-      priority: "C",
+      priority: "B",
     },
   ],
   
@@ -219,13 +224,13 @@ export const athleteData = {
   
   // Contacto
   contact: {
-    email: "atleta@email.com",
-    whatsapp: "+5491112345678",
-    instagram: "@atleta_tri",
+    email: "leticiaalberto04@gmail.com",
+    whatsapp: "+5493513042525",
+    instagram: "@lety.atleta.arg",
   },
   
   // Media Kit PDF URL
-  mediaKitUrl: "/media-kit.pdf",
+  mediaKitUrl: "/LA-Media-Kit.pdf",
 }
 
 // Datos de métricas de entrenamiento (para dashboard en vivo - futuro)

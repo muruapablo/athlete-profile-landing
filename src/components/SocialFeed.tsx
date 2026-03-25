@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Instagram, ExternalLink, Play } from 'lucide-react'
 import { athleteData } from '@/data/athlete'
+import BeholdFeed from './BeholdFeed'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -17,18 +18,18 @@ const itemVariants = {
   visible: { opacity: 1, scale: 1 },
 }
 
-// Placeholder para posts de Instagram (en producción usarías la API)
-const instagramPosts = [
-  { id: 1, type: 'reel', thumbnail: '/images/post-1.jpg', likes: 1250, comments: 45 },
-  { id: 2, type: 'image', thumbnail: '/images/post-2.jpg', likes: 890, comments: 32 },
-  { id: 3, type: 'reel', thumbnail: '/images/post-3.jpg', likes: 2100, comments: 78 },
-  { id: 4, type: 'image', thumbnail: '/images/post-4.jpg', likes: 1560, comments: 56 },
-  { id: 5, type: 'reel', thumbnail: '/images/post-5.jpg', likes: 3200, comments: 120 },
-  { id: 6, type: 'image', thumbnail: '/images/post-6.jpg', likes: 980, comments: 38 },
+// Placeholder para posts de Instagram (fallback si Behold no está configurado)
+const placeholderPosts = [
+  { id: '1', type: 'carousel_album', thumbnailUrl: '/images/post-1.jpg', permalink: '#' },
+  { id: '2', type: 'image', thumbnailUrl: '/images/post-2.jpg', permalink: '#' },
+  { id: '3', type: 'video', thumbnailUrl: '/images/post-3.jpg', permalink: '#' },
+  { id: '4', type: 'image', thumbnailUrl: '/images/post-4.jpg', permalink: '#' },
+  { id: '5', type: 'video', thumbnailUrl: '/images/post-5.jpg', permalink: '#' },
+  { id: '6', type: 'image', thumbnailUrl: '/images/post-6.jpg', permalink: '#' },
 ]
 
 export default function SocialFeed() {
-  const { socialMetrics } = athleteData
+  const { socialMetrics, beholdFeedId } = athleteData
 
   return (
     <section id="contenido" className="section-padding relative overflow-hidden">
@@ -86,7 +87,7 @@ export default function SocialFeed() {
             <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
 
-          <a
+          {/* <a
             href={socialMetrics.youtube.url}
             target="_blank"
             rel="noopener noreferrer"
@@ -99,10 +100,10 @@ export default function SocialFeed() {
             </div>
             <span className="font-medium">@{socialMetrics.youtube.handle}</span>
             <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </a>
+          </a> */}
         </motion.div>
 
-        {/* Instagram Feed Grid (Placeholder) */}
+        {/* Instagram Feed Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -125,71 +126,70 @@ export default function SocialFeed() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {instagramPosts.map((post) => (
-              <motion.div
-                key={post.id}
-                variants={itemVariants}
-                className="group relative aspect-square rounded-xl overflow-hidden bg-dark-600 cursor-pointer"
-              >
-                {/* Post image */}
-                <img 
-                  src={post.thumbnail} 
-                  alt={`Post ${post.id}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                
-                {/* Reel indicator */}
-                {post.type === 'reel' && (
-                  <div className="absolute top-2 right-2 p-1.5 rounded-full bg-black/50">
-                    <Play className="w-3 h-3 text-white fill-white" />
-                  </div>
-                )}
+          {/* Behold Feed (si está configurado) o Placeholders */}
+          {beholdFeedId ? (
+            <BeholdFeed feedId={beholdFeedId} />
+          ) : (
+            <>
+              {/* Placeholders Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {placeholderPosts.map((post) => (
+                  <motion.a
+                    key={post.id}
+                    href={post.permalink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variants={itemVariants}
+                    className="group relative aspect-square rounded-xl overflow-hidden bg-dark-600 cursor-pointer"
+                  >
+                    {/* Post image */}
+                    <img 
+                      src={post.thumbnailUrl} 
+                      alt="Instagram post"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = '/images/placeholder-post.jpg'
+                      }}
+                    />
+                    
+                    {/* Video/Reel indicator */}
+                    {(post.type === 'video' || post.type === 'carousel_album') && (
+                      <div className="absolute top-2 right-2 p-1.5 rounded-full bg-black/50">
+                        <Play className="w-3 h-3 text-white fill-white" />
+                      </div>
+                    )}
 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6">
-                  <div className="text-center">
-                    <p className="font-bold">{post.likes}</p>
-                    <p className="text-xs text-gray-300">❤️ likes</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-bold">{post.comments}</p>
-                    <p className="text-xs text-gray-300">💬 comments</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Embedded Video Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-xl font-semibold mb-6 flex items-center gap-3">
-            <Play className="w-5 h-5 text-red-400" />
-            Mini Documental
-          </h3>
-          
-          <div className="glass rounded-2xl overflow-hidden">
-            <div className="aspect-video bg-dark-700 flex items-center justify-center">
-              {/* YouTube Embed Placeholder */}
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-white ml-1" />
-                </div>
-                <p className="text-xl font-semibold mb-2">¿Qué significa ser triatleta de alto rendimiento?</p>
-                <p className="text-gray-400 text-sm">Video documental de 3 minutos</p>
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <div className="text-center">
+                        <ExternalLink className="w-6 h-6 mx-auto mb-2" />
+                        <p className="text-xs text-gray-300">Ver en Instagram</p>
+                      </div>
+                    </div>
+                  </motion.a>
+                ))}
               </div>
-            </div>
-          </div>
-          
-          <p className="text-center text-gray-400 text-sm mt-4">
-            * Integración con YouTube para reproducción directa. Ideal para mostrar a sponsors potenciales.
-          </p>
+
+              {/* Info message */}
+              <div className="text-center text-gray-500 text-sm mt-6 glass rounded-xl p-4">
+                <p className="mb-2">📸 Contenido de demostración</p>
+                <p className="text-xs">
+                  Sigue las instrucciones en{' '}
+                  <a 
+                    href="/BEHOLD_SETUP.md" 
+                    className="text-primary-400 hover:underline"
+                    target="_blank"
+                  >
+                    BEHOLD_SETUP.md
+                  </a>
+                  {' '}para conectar Instagram en 2 minutos
+                </p>
+              </div>
+            </>
+          )}
         </motion.div>
+
+        {/* Embedded Video Section - Comentado */}
       </div>
     </section>
   )

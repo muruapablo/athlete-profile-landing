@@ -5,7 +5,7 @@ import MetricsSection from '@/components/MetricsSection'
 import RaceCalendar from '@/components/RaceCalendar'
 import SocialFeed from '@/components/SocialFeed'
 import SponsorProposal from '@/components/SponsorProposal'
-import Timeline from '@/components/Timeline'
+// import Timeline from '@/components/Timeline'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 
@@ -19,7 +19,7 @@ export default function Home() {
       <RaceCalendar />
       <SocialFeed />
       <SponsorProposal />
-      <Timeline />
+      {/* <Timeline /> */}
       <ContactSection />
       <Footer />
     </main>

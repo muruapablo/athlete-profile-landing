@@ -11,7 +11,7 @@ const navItems = [
   { name: 'Calendario', href: '#calendario' },
   { name: 'Contenido', href: '#contenido' },
   { name: 'Sponsors', href: '#sponsors' },
-  { name: 'Historia', href: '#historia' },
+  // { name: 'Historia', href: '#historia' },
   { name: 'Contacto', href: '#contacto' },
 ]
 

@@ -49,6 +49,7 @@ export default function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
+              {/* YouTube comentado - la atleta no usa esta plataforma
               <a
                 href={socialMetrics.youtube.url}
                 target="_blank"
@@ -57,6 +58,7 @@ export default function Footer() {
               >
                 <Youtube className="w-5 h-5" />
               </a>
+              */}
               <a
                 href={`mailto:${contact.email}`}
                 className="p-3 glass rounded-lg hover:bg-white/10 transition-colors"

@@ -20,8 +20,8 @@ const itemVariants = {
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr)
   return date.toLocaleDateString('es-AR', {
-    day: 'numeric',
-    month: 'short',
+    day: '2-digit',
+    month: '2-digit',
     year: 'numeric',
   })
 }
