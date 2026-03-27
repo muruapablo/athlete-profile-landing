@@ -90,15 +90,15 @@ export const athleteData = {
       status: "confirmed", // confirmed | target | preparation
       priority: "A", // A = objetivo principal, B = preparación, C = training
     },
-    /*{
-      name: "Triatlón Sprint Mar del Plata",
-      date: "2025-02-01",
-      location: "Mar del Plata, Argentina",
-      distance: "Sprint",
-      status: "confirmed",
+    {
+      name: "Hombre de piedra 2026",
+      date: "2026-09-26",
+      location: "Tandil, Argentina",
+      distance: "Duatlon",
+      status: "preparation",
       priority: "B",
     },
-    {
+    /*{
       name: "Ironman Mar del Plata",
       date: "2025-12-07",
       location: "Mar del Plata, Argentina",

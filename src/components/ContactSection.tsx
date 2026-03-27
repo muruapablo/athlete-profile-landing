@@ -19,15 +19,30 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simular envío (reemplazar con integración real)
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: '', email: '', company: '', message: '' })
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+    try {
+      const response = await fetch('https://formspree.io/f/mpqoandy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formState)
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({ name: '', email: '', company: '', message: '' })
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setIsSubmitted(false), 5000)
+      } else {
+        alert('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.')
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error)
+      alert('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

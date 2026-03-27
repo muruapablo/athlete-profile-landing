@@ -8,20 +8,20 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Athlete Profile | Triatleta de Alto Rendimiento',
-  description: 'Plataforma profesional de atleta - Media Kit interactivo, métricas deportivas y oportunidades de sponsorship.',
-  keywords: ['triatlón', 'atleta', 'sponsorship', 'deportista', 'alto rendimiento'],
-  authors: [{ name: 'Athlete Name' }],
+  title: 'Leticia Alberto | Triatleta de Alto Rendimiento',
+  description: 'Triatleta Elite Amateur con +5 años de experiencia. Disciplina, constancia y resultados medibles. Media Kit y oportunidades de sponsorship.',
+  keywords: ['triatlón', 'atleta', 'sponsorship', 'deportista', 'alto rendimiento', 'Leticia Alberto', 'AGMT2', 'Córdoba'],
+  authors: [{ name: 'Leticia Alberto' }],
   openGraph: {
-    title: 'Athlete Profile | Triatleta de Alto Rendimiento',
-    description: 'Disciplina, constancia y resultados medibles. Conocé mi perfil deportivo y oportunidades de sponsorship.',
+    title: 'Leticia Alberto | Triatleta de Alto Rendimiento',
+    description: '🏊‍♀️🚴‍♀️🏃‍♀️ Triatleta Elite Amateur • AGMT2 • Disciplina, constancia y resultados medibles. Conocé mi perfil y propuestas de sponsorship.',
     type: 'website',
     locale: 'es_AR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Athlete Profile | Triatleta de Alto Rendimiento',
-    description: 'Disciplina, constancia y resultados medibles.',
+    title: 'Leticia Alberto | Triatleta de Alto Rendimiento',
+    description: '🏊‍♀️🚴‍♀️🏃‍♀️ Triatleta Elite Amateur • Disciplina, constancia y resultados medibles.',
   },
 }
 
