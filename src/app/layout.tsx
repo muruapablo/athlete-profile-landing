@@ -17,11 +17,20 @@ export const metadata: Metadata = {
     description: '🏊‍♀️🚴‍♀️🏃‍♀️ Triatleta Elite Amateur • AGMT2 • Disciplina, constancia y resultados medibles. Conocé mi perfil y propuestas de sponsorship.',
     type: 'website',
     locale: 'es_AR',
+    images: [
+      {
+        url: '/og-image.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Leticia Alberto - Triatleta de Alto Rendimiento',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Leticia Alberto | Triatleta de Alto Rendimiento',
     description: '🏊‍♀️🚴‍♀️🏃‍♀️ Triatleta Elite Amateur • Disciplina, constancia y resultados medibles.',
+    images: ['/og-image.jpeg'],
   },
 }
 
