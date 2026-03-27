@@ -78,7 +78,7 @@ export const athleteData = {
   // Behold Instagram Feed (Servicio de terceros - más fácil que API)
   // Obtén tu Feed ID en https://behold.so después de crear tu feed
   // Ejemplo: "ABC123DEF"
-  beholdFeedId: "", // Vacío = usa placeholders. Completa después de crear el feed en Behold
+  beholdFeedId: "9KRxsx5BDIqvDiUcB6xg", // Vacío = usa placeholders. Completa después de crear el feed en Behold
   
   // Calendario de competencias
   upcomingRaces: [
