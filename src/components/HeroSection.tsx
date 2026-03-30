@@ -142,18 +142,8 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href={athleteData.mediaKitUrl}
-              download
-              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25"
-            >
-              <Download className="w-5 h-5" />
-              Descargar Media Kit
-              <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-            
-            <a
               href="#contacto"
-              className="inline-flex items-center gap-3 px-8 py-4 glass rounded-full font-semibold text-lg transition-all hover:scale-105 hover:bg-white/10"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full font-semibold text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25"
             >
               <Mail className="w-5 h-5" />
               Contactar para Sponsorship
