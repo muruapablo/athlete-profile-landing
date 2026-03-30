@@ -199,21 +199,34 @@ export default function MetricsSection() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="glass rounded-xl p-6 card-hover relative overflow-hidden"
+                className="glass rounded-xl overflow-hidden card-hover relative group"
               >
-                {/* Position badge */}
-                <div className={`absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg ${
-                  achievement.position === 1 ? 'bg-yellow-500 text-black' :
-                  achievement.position === 2 ? 'bg-gray-300 text-black' :
-                  achievement.position === 3 ? 'bg-amber-600 text-white' :
-                  'bg-dark-500 text-white'
-                }`}>
-                  {achievement.position}°
+                {/* Achievement Image */}
+                <div className="relative aspect-square overflow-hidden bg-dark-700">
+                  <img 
+                    src={achievement.image || '/images/placeholder-achievement.jpg'} 
+                    alt={achievement.event}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent pointer-events-none" />
+                  
+                  {/* Position badge */}
+                  <div className={`absolute top-3 right-3 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg ${
+                    achievement.position === 1 ? 'bg-yellow-500 text-black' :
+                    achievement.position === 2 ? 'bg-gray-300 text-black' :
+                    achievement.position === 3 ? 'bg-amber-600 text-white' :
+                    'bg-dark-500 text-white'
+                  }`}>
+                    {achievement.position}°
+                  </div>
                 </div>
                 
-                <p className="text-lg font-semibold text-white mb-2">{achievement.event}</p>
-                <p className="text-sm text-gray-400 mb-1">{achievement.year}</p>
-                <p className="text-xs text-primary-400">{achievement.category}</p>
+                {/* Content */}
+                <div className="p-4">
+                  <p className="text-lg font-semibold text-white mb-2">{achievement.event}</p>
+                  <p className="text-sm text-gray-400 mb-1">{achievement.year}</p>
+                  <p className="text-xs text-primary-400">{achievement.category}</p>
+                </div>
               </motion.div>
             ))}
           </div>

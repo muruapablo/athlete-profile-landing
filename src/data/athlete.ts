@@ -39,10 +39,10 @@ export const athleteData = {
   
   // Resultados destacados
   achievements: [
-    { position: 1, event: "Triatlón Cordoba 26", year: 2026, category: "General" },
-    { position: 1, event: "Triatlón Cross 25", year: 2025, category: "General" },
-    { position: 5, event: "Desafio Rio Pinto", year: 2025, category: "Damas A2" },
-    { position: 1, event: "Gran Fondo 7 Lagos", year: 2024, category: "Damas A" },
+    { position: 1, event: "Triatlón Cordoba 26", year: 2026, category: "General", image: "/images/achievements/cordoba-26.jpg" },
+    { position: 1, event: "Triatlón Cross 25", year: 2025, category: "General", image: "/images/achievements/cross-25.jpg" },
+    { position: 5, event: "Desafio Rio Pinto", year: 2025, category: "Damas A2", image: "/images/achievements/rio-pinto-25.jpg" },
+    { position: 1, event: "Gran Fondo 7 Lagos", year: 2024, category: "Damas A", image: "/images/achievements/7-lagos-24.jpg" },
   ],
   
   // Métricas digitales
