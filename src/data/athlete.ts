@@ -4,7 +4,7 @@ export const athleteData = {
   name: "Leticia Alberto",
   title: "Triatleta de Alto Rendimiento",
   claim: "Disciplina, constancia y resultados medibles",
-  bio: "Hce más de 5 años empecé este camino enfrentando mis propios limites. Busco alianzas con marcas que compartan mis valores de disciplina y alto rendimiento.",
+  bio: "Hace 5 años empecé este camino enfrentando mis propios limites. Busco alianzas con marcas que compartan mis valores de disciplina y alto rendimiento.",
   location: "Córdoba, Argentina",
   
   // Video hero (URL de YouTube embed o video local)

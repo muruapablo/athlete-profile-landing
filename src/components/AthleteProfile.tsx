@@ -48,7 +48,7 @@ export default function AthleteProfile() {
             Perfil <span className="gradient-text">Deportivo</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Triatleta amateur con más de {profile.yearsOfExperience} años de experiencia en Running, Ciclismo y Natación enfocada en el redimiento y la evolución constante 
+          Triatleta amateur con más de {profile.yearsOfExperience} años de experiencia en running, ciclismo y natación, enfocada en el rendimiento y la evolución constante.
           </p>
         </motion.div>
 
