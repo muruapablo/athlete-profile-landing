@@ -4,7 +4,7 @@ export const athleteData = {
   name: "Leticia Alberto",
   title: "Triatleta de Alto Rendimiento",
   claim: "Disciplina, constancia y resultados medibles",
-  bio: "Atleta dedicada al triatlón desde hace más de 5 años. Comprometida con la excelencia deportiva y la superación constante. Busco alianzas con marcas que compartan mis valores de disciplina y alto rendimiento.",
+  bio: "Hce más de 5 años empecé este camino enfrentando mis propios limites. Busco alianzas con marcas que compartan mis valores de disciplina y alto rendimiento.",
   location: "Córdoba, Argentina",
   
   // Video hero (URL de YouTube embed o video local)
@@ -15,7 +15,7 @@ export const athleteData = {
   // Perfil deportivo
   profile: {
     discipline: "Triatlón",
-    category: "Elite Amateur",
+    category: "Amateur",
     yearsOfExperience: 5,
     club: "AGMT2",
     currentSponsors: ["Oslo", "Ziroox", "24hs SECURITY"],
