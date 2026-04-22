@@ -2,8 +2,8 @@
 export const athleteData = {
   // Información personal
   name: "Leticia Alberto",
-  title: "Triatleta de Alto Rendimiento",
-  claim: "Disciplina, constancia y resultados medibles",
+  title: "Triatleta en crecimiento",
+  claim: "Te muestro la vida de una triatleta de verdad",
   bio: "Hace 5 años empecé este camino enfrentando mis propios limites. Busco alianzas con marcas que compartan mis valores de disciplina y alto rendimiento.",
   location: "Córdoba, Argentina",
   
@@ -48,7 +48,7 @@ export const athleteData = {
   // Métricas digitales
   socialMetrics: {
     instagram: {
-      followers: 13200,
+      followers: 14200,
       engagement: 4.2,
       avgReach: 25000,
       avgViews: 12000,
@@ -95,24 +95,24 @@ export const athleteData = {
       date: "2026-09-26",
       location: "Tandil, Argentina",
       distance: "Duatlon",
-      status: "preparation",
-      priority: "B",
-    },
-    /*{
-      name: "Ironman Mar del Plata",
-      date: "2025-12-07",
-      location: "Mar del Plata, Argentina",
-      distance: "Full Ironman",
-      status: "target",
+      status: "confirmed",
       priority: "A",
-    },*/
+    },
+    {
+      name: "DDLN 2026",
+      date: "2026-06-07",
+      location: "Salta, Argentina",
+      distance: "80k Rural Bike",
+      status: "confirmed",
+      priority: "A",
+    },
     {
       name: "Rio Pinto 2026",
       date: "2026-05-03",
       location: "La Cumbre, Córdoba, Argentina",
       distance: "85KM",
-      status: "preparation",
-      priority: "B",
+      status: "confirmed",
+      priority: "A",
     },
   ],
   
