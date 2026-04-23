@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Heart, Instagram, Youtube, Mail } from 'lucide-react'
+import { Citrus, Instagram, Youtube, Mail } from 'lucide-react'
 import { athleteData } from '@/data/athlete'
 
 export default function Footer() {
@@ -78,7 +78,7 @@ export default function Footer() {
             © {currentYear} {athleteData.name}. Todos los derechos reservados.
           </p>
           <p className="text-sm text-gray-500 flex items-center gap-1">
-            Hecho con <Heart className="w-4 h-4 text-red-500 fill-red-500" /> para sponsors increíbles
+            Hecho Por <Citrus className="w-4 h-4 text-orange-500 fill-orange-500" /> Mandarine Desing
           </p>
         </div>
       </div>
