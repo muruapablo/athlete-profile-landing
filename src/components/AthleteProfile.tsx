@@ -64,7 +64,7 @@ export default function AthleteProfile() {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Award className="w-6 h-6 text-primary-400" />
-                Información del Atleta
+                Información
               </h3>
             </motion.div>
 
@@ -103,6 +103,7 @@ export default function AthleteProfile() {
                   </div>
                 </div>
               </div>
+              
             </motion.div>
 
             {/* Current Sponsors */}
@@ -140,7 +141,7 @@ export default function AthleteProfile() {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Trophy className="w-6 h-6 text-accent-400" />
-                Valores del Atleta
+                Valores
               </h3>
             </motion.div>
 
